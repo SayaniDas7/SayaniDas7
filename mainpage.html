@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Nexus</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon" sizes="150x150">
+    <style>
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a2e; /* Royal-themed background color */
+            color: white;
+            margin: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        header img {
+            height: 50px;
+            margin-right: 20px;
+            animation: blink 1s infinite; /* Blinking effect */
+        }
+        header h1 {
+            font-size: 24px;
+            color: #e94560; /* Neon color */
+            animation: blink 1s infinite; /* Blinking effect */
+        }
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            gap: 40px; /* Larger gap for desktop */
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .game-button {
+            background-color: #8e44ad; /* Royal purple color */
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px; /* Rounded corner square */
+            font-family: 'Press Start 2P', cursive;
+            box-shadow: 0 4px #999;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 200px;
+            height: 200px; /* Make buttons square */
+        }
+        .game-button img {
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .game-button:hover {
+            background-color: #9b59b6; /* Lighter shade of royal purple */
+        }
+        .game-button:active {
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
+        }
+        .previous-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #8e44ad; /* Royal purple color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+            transition: background-color 0.3s;
+        }
+        .previous-button:hover {
+            background-color: #9b59b6; /* Lighter shade of royal purple */
+        }
+        @media (max-width: 768px) {
+            .button-container {
+                gap: 20px; /* Smaller gap for tablet */
+            }
+            .game-button {
+                width: 150px;
+                height: 180px; /* Increase height for tablet */
+                padding: 15px;
+                font-size: 14px;
+                border-radius: 10px; /* Rounded corner square */
+            }
+            .game-button img {
+                height: 80px;
+            }
+            header h1 {
+                font-size: 20px;
+                color: #e94560; /* Neon color */
+                margin-bottom: 20px;
+                text-shadow: 2px 2px #000;
+            }
+        }
+        @media (max-width: 480px) {
+            .button-container {
+                gap: 15px; /* Smallest gap for phone */
+            }
+            .game-button {
+                width: 125px;
+                height: 160px; /* Increase height for phone */
+                padding: 20px;
+                font-size: 10px; /* Smaller font size for phone */
+                border-radius: 10px; /* Rounded corner square */
+            }
+            .game-button img {
+                height: 60px;
+            }
+            header h1 {
+                font-size: 18px;
+                color: #e94560; /* Neon color */
+                margin-bottom: 20px;
+                text-shadow: 2px 2px #000;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Neon Nexus Logo"> <!-- Replace with your logo path -->
+        <h1>Neon Nexus</h1>
+    </header>
+    <div class="button-container">
+        <button class="game-button" onclick="location.href='tic tac toe.html'">
+            <img src="tictactoe.png" alt="Tic Tac Toe"> <!-- Replace with your image path -->
+            Tic Tac Toe
+        </button>
+        <button class="game-button" onclick="location.href='snake game.html'">
+            <img src="snake.webp" alt="Snake Game"> <!-- Replace with your image path -->
+            Snake Game
+        </button>
+        <button class="game-button" onclick="location.href='rock and roll.html'">
+            <img src="rock paper scissor.png" alt="Rock and Roll"> <!-- Replace with your image path -->
+            Rock Paper and Scissors
+        </button>
+    </div>
+    <button class="previous-button" onclick="location.href='frontpage.html'">Previous</button>
+</body>
+</html>
